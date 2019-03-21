@@ -1,0 +1,402 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+<!-- Meta Tags Per Page Descriptions -->
+    {% block metaDescription %}
+        <meta name="description" content=
+        "Welcome to Four State Stockyards in Exeter, Missouri. We are a family owned and operated sale barn with a passion for the livestock industry.">
+    {% endblock metaDescription %}
+<!-- Meta Keywords -->
+    {% block metaKeywords %}
+      <meta name="keywords" content="Four state Stockyards, Buyer, Seller, Sale, Market, Market Report, Livestock Summary Report, Livestock, Summary Report, Date, Receipts, Head Count, Weight Class, Weight, Remarks, Heifers, Cows, Calves, Steers, Bulls, Dairy, Sheep, Goat, Lambs, Rams, Hight Price, Low Price, Dairy Steers, Dairy Heifers, Dairy Cows, Bull Calves, Bottle Calves, Pairs, Bred Cows, Slaughter Cows, Slaughter Bulls, Slaughter, Feeder Kids, Slaughter Kids, Feeders Lambs, Feeder, Kids, Slaughter Lambs, Replacement Does, Slaughter Does, Does, Slaughter Rams, Slaughter Bucks, Bucks, Replacement Ewes, Ewes, ">
+    {% endblock metaKeywords %}
+<!-- Title -->
+    {% block titleContent %}
+      | Livestock Market Report
+    {% endblock titleContent %}
+<!-- schemas Per Page or Section -->
+    {% block schemasContent %}
+    {% endblock schemasContent %}
+
+<!-- Main Body -->
+{% block mainContent %}
+    <section class="container">
+      <main class="intro">
+        <h1 class="reportH">Weekly Livestock Report</h1>
+        {% if summaryReport %}
+            {% for summary in summaryReport %}
+            <div class="row justify-content-between">
+                    <div class="col-4">
+                        <p>
+                            Livestock Summary Report.
+                        </p>
+                    <div class="col-4">
+                        <p>
+                            Date: {{ summary.sale_date }} Receipts: {{ summary.receipts }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+                <p>
+                    {{ summary.sale_description }}
+                </p>
+            {% endfor %}
+        {% else %}
+            <p>
+                No Summary Report
+            </p>
+        {% endif %}
+        {% if livestock %}
+            <p>
+                Market Report.
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                        <th scope="col">Livestock Type</th>
+                        <th scope="col">Head Count</th>
+                        <th scope="col">Weight Class</th>
+                        <th scope="col">Hight Price</th>
+                        <th scope="col">Low Price</th>
+                        <th scope="col">Remarks</th>
+                        </tr>
+                    </thead>
+                    {% for stock in livestock %}
+                        {% if stock.type_Livestock == "Steers" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ stock.type_Livestock }}</th>
+                                <td>{{ stock.head_Count }}</td>
+                                <td>{{ stock.livestock_weight }}</td>
+                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.low_price}}</td>
+                                <td>{{ stock.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                        {% if stock.type_Livestock == "Dairy Steers" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ stock.type_Livestock }}</th>
+                                <td>{{ stock.head_Count }}</td>
+                                <td>{{ stock.livestock_weight }}</td>
+                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.low_price}}</td>
+                                <td>{{ stock.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                        {% if stock.type_Livestock == "Dairy Heifers" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ stock.type_Livestock }}</th>
+                                <td>{{ stock.head_Count }}</td>
+                                <td>{{ stock.livestock_weight }}</td>
+                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.low_price}}</td>
+                                <td>{{ stock.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                        {% if stock.type_Livestock == "Dairy Cows" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ stock.type_Livestock }}</th>
+                                <td>{{ stock.head_Count }}</td>
+                                <td>{{ stock.livestock_weight }}</td>
+                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.low_price}}</td>
+                                <td>{{ stock.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                        {% if stock.type_Livestock == "Heifers" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ stock.type_Livestock }}</th>
+                                <td>{{ stock.head_Count }}</td>
+                                <td>{{ stock.livestock_weight }}</td>
+                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.low_price}}</td>
+                                <td>{{ stock.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                        {% if stock.type_Livestock == "Bottle Calves" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ stock.type_Livestock }}</th>
+                                <td>{{ stock.head_Count }}</td>
+                                <td>{{ stock.livestock_weight }}</td>
+                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.low_price}}</td>
+                                <td>{{ stock.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                        {% if stock.type_Livestock == "Calves" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ stock.type_Livestock }}</th>
+                                <td>{{ stock.head_Count }}</td>
+                                <td>{{ stock.livestock_weight }}</td>
+                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.low_price}}</td>
+                                <td>{{ stock.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                        {% if stock.type_Livestock == "Bull Calves" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ stock.type_Livestock }}</th>
+                                <td>{{ stock.head_Count }}</td>
+                                <td>{{ stock.livestock_weight }}</td>
+                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.low_price}}</td>
+                                <td>{{ stock.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                        {% if stock.type_Livestock == "Pairs" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ stock.type_Livestock }}</th>
+                                <td>{{ stock.head_Count }}</td>
+                                <td>{{ stock.livestock_weight }}</td>
+                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.low_price}}</td>
+                                <td>{{ stock.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                        {% if stock.type_Livestock == "Bred Cows" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ stock.type_Livestock }}</th>
+                                <td>{{ stock.head_Count }}</td>
+                                <td>{{ stock.livestock_weight }}</td>
+                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.low_price}}</td>
+                                <td>{{ stock.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                        {% if stock.type_Livestock == "Bulls" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ stock.type_Livestock }}</th>
+                                <td>{{ stock.head_Count }}</td>
+                                <td>{{ stock.livestock_weight }}</td>
+                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.low_price}}</td>
+                                <td>{{ stock.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                        {% if stock.type_Livestock == "Slaughter Cows" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ stock.type_Livestock }}</th>
+                                <td>{{ stock.head_Count }}</td>
+                                <td>{{ stock.livestock_weight }}</td>
+                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.low_price}}</td>
+                                <td>{{ stock.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                        {% if stock.type_Livestock == "Slaughter Bulls" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ stock.type_Livestock }}</th>
+                                <td>{{ stock.head_Count }}</td>
+                                <td>{{ stock.livestock_weight }}</td>
+                                <td>{{ stock.hight_price}}</td>
+                                <td>{{ stock.low_price}}</td>
+                                <td>{{ stock.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                    {% endfor %} 
+                </table>
+            </p>
+        {% else %}
+            <p>No Market Report</p>
+        {% endif %}
+      </main>
+      <main class="intro">
+        <h1 class="sheepH">Sheep/Goat Monthly Report</h1>
+        {% if summarySheep %}
+            {% for summary in summarySheep %}
+            <div class="row justify-content-between">
+                    <div class="col-4">
+                <p>
+                    Sheep/Goat Summary Report.
+                </p>
+                <p>
+                    Date: {{ summary.sale_date }} Receipts: {{ summary.receipts }}
+                </p>
+                <p>
+                    {{ summary.sale_description }}
+                </p>
+            {% endfor %}
+        {% else %}
+            <p>
+                No Summary Report
+            </p>
+        {% endif %}
+        {% if sheepstock %}
+            <p>
+            Sheep/Goat Market Report.
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                        <th scope="col">Livestock Type</th>
+                        <th scope="col">Head Count</th>
+                        <th scope="col">Weight Class</th>
+                        <th scope="col">Hight Price</th>
+                        <th scope="col">Low Price</th>
+                        <th scope="col">Remarks</th>
+                        </tr>
+                    </thead>
+                    {% for sheep in sheepstock %}
+                        {% if sheep.type_Livestock == "Feeder Kids" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ sheep.type_Livestock }}</th>
+                                <td>{{ sheep.head_Count }}</td>
+                                <td>{{ sheep.livestock_weight }}</td>
+                                <td>{{ sheep.hight_price}}</td>
+                                <td>{{ sheep.low_price}}</td>
+                                <td>{{ sheep.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                        {% if sheep.type_Livestock == "Slaughter Kids" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ sheep.type_Livestock }}</th>
+                                <td>{{ sheep.head_Count }}</td>
+                                <td>{{ sheep.livestock_weight }}</td>
+                                <td>{{ sheep.hight_price}}</td>
+                                <td>{{ sheep.low_price}}</td>
+                                <td>{{ sheep.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                        {% if sheep.type_Livestock == "Feeder Lambs" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ sheep.type_Livestock }}</th>
+                                <td>{{ sheep.head_Count }}</td>
+                                <td>{{ sheep.livestock_weight }}</td>
+                                <td>{{ sheep.hight_price}}</td>
+                                <td>{{ sheep.low_price}}</td>
+                                <td>{{ sheep.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                        {% if sheep.type_Livestock == "Slaughter Lambs" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ sheep.type_Livestock }}</th>
+                                <td>{{ sheep.head_Count }}</td>
+                                <td>{{ sheep.livestock_weight }}</td>
+                                <td>{{ sheep.hight_price}}</td>
+                                <td>{{ sheep.low_price}}</td>
+                                <td>{{ sheep.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                        {% if sheep.type_Livestock == "Replacement Does" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ sheep.type_Livestock }}</th>
+                                <td>{{ sheep.head_Count }}</td>
+                                <td>{{ sheep.livestock_weight }}</td>
+                                <td>{{ sheep.hight_price}}</td>
+                                <td>{{ sheep.low_price}}</td>
+                                <td>{{ sheep.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                        {% if sheep.type_Livestock == "Slaughter Does" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ sheep.type_Livestock }}</th>
+                                <td>{{ sheep.head_Count }}</td>
+                                <td>{{ sheep.livestock_weight }}</td>
+                                <td>{{ sheep.hight_price}}</td>
+                                <td>{{ sheep.low_price}}</td>
+                                <td>{{ sheep.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                        {% if sheep.type_Livestock == "Slaughter Rams" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ sheep.type_Livestock }}</th>
+                                <td>{{ sheep.head_Count }}</td>
+                                <td>{{ sheep.livestock_weight }}</td>
+                                <td>{{ sheep.hight_price}}</td>
+                                <td>{{ sheep.low_price}}</td>
+                                <td>{{ sheep.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                        {% if sheep.type_Livestock == "Rams" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ sheep.type_Livestock }}</th>
+                                <td>{{ sheep.head_Count }}</td>
+                                <td>{{ sheep.livestock_weight }}</td>
+                                <td>{{ sheep.hight_price}}</td>
+                                <td>{{ sheep.low_price}}</td>
+                                <td>{{ sheep.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                        {% if sheep.type_Livestock == "Slaughter Bucks" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ sheep.type_Livestock }}</th>
+                                <td>{{ sheep.head_Count }}</td>
+                                <td>{{ sheep.livestock_weight }}</td>
+                                <td>{{ sheep.hight_price}}</td>
+                                <td>{{ sheep.low_price}}</td>
+                                <td>{{ sheep.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                        {% if sheep.type_Livestock == "Replacement Ewes" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ sheep.type_Livestock }}</th>
+                                <td>{{ sheep.head_Count }}</td>
+                                <td>{{ sheep.livestock_weight }}</td>
+                                <td>{{ sheep.hight_price}}</td>
+                                <td>{{ sheep.low_price}}</td>
+                                <td>{{ sheep.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                        {% if sheep.type_Livestock == "Bucks" %}
+                            <tbody>
+                                <tr>
+                                <th scope="row">{{ sheep.type_Livestock }}</th>
+                                <td>{{ sheep.head_Count }}</td>
+                                <td>{{ sheep.livestock_weight }}</td>
+                                <td>{{ sheep.hight_price}}</td>
+                                <td>{{ sheep.low_price}}</td>
+                                <td>{{ sheep.remarks }}</td>
+                                </tr>
+                            </tbody>
+                        {% endif %}
+                    {% endfor %} 
+                </table>
+            </p>
+        {% else %}
+            <p>No Market Report</p>
+        {% endif %}
+      </main>
+    </section>
+{% endblock mainContent %}

@@ -1,0 +1,100 @@
+{% load static  %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Geo Tag -->
+
+
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    {% block metaDescription %}
+      <meta name="description" content=
+        "Welcome to Four State Stockyards in Exeter, Missouri. We are a family owned and operated sale barn with a passion for the livestock industry.">
+    {% endblock metaDescription %}
+    <!-- Meta Keywords -->
+    {% block metaKeywords %}
+      <meta name="keywords" content="Sale Barn, Livestock, Livestock Sale, Livestock Sell, Livestock Sale Barn, Cattle Sales, Cattle Sell, Cattle Sale Barn, Sheep Sale, Sheep Sell, Sheep Sale Barn, Goat Sell, Goat Sale, Goat Sale Barn, Sell Barn, Exeter Sale Barn, Missouri Sale Barn, Exeter Missouri, Sale Barns Near Arkansas, Sale Barns In Missouri, Southwest Sale Barns ">
+    {% endblock metaKeywords %}
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+
+    <!-- Author -->
+    <meta name="author" content="Jason Sikes">
+
+    <!-- Title -->
+    <title> Four State Stockyards
+    {% block titleContent %}
+        Title
+    {% endblock titleContent %}
+    </title>
+
+    <!-- Schemas -->
+      <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Four State Stockyards",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "9735 MO-76 ",
+            "addressLocality": "Exeter",
+            "addressRegion": "MO",
+            "postalCode": "65647"
+          },
+          "image": "http://fourstatestockyards.com/images/SEViewFront.jpg",
+          "telePhone": "417-835-3000",
+          "url": "http://fourstatestockyards.com",
+          "paymentAccepted": [ "cash", "check", "credit card" ],
+          "openingHours": "Tu 10:00-22:00",
+          "openingHoursSpecification": [ {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Tuesday"
+            ],
+            "opens": "10:00",
+            "closes": "22:00"
+          } ],
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "36.672437",
+            "longitude": "-93.956800"
+          },
+          "priceRange":"$$$$"
+
+        }
+      </script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+  </head>
+  <body id="body">
+  
+    <div id="fb-root"></div>
+      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=238618870403539&autoLogAppEvents=1"></script>
+    
+    <!-- Header/Nav -->
+    {% include 'partials/_navbar.html' %}
+    <!-- Main Content -->
+    {% block mainContent %} Replace Me
+    {% endblock mainContent %}
+    <!-- Footer -->
+    {% include 'partials/_footer.html' %}
+    
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- My JS -->
+    <script src="{% static 'JS/footer.js' %}"></script>
+    {% comment %} <script src="{% static 'js/getMarket.js' %}"></script> {% endcomment %}
+  </body>
+</html>

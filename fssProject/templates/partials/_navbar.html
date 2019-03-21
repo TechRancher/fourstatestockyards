@@ -1,0 +1,34 @@
+{% load static %}
+<!-- Header/Nav -->
+<header>
+    <nav class="navbar fixed-top navbar-light navbar-expand-xl">
+        <a class="navbar-brand nav-business-name" href="{% url 'index' %}">
+            <img src="{% static 'images/midSize.png' %}" width="50" height="50" class="d-inline-block align-middle"
+                alt="Logo">
+            Four State Stockyards<br><span class="brand-num"> 417-835-3000</span></a>
+            <span class="header_info">Live Sale Every Tuesday at 10 am.</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'contactRep' %}">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'salesInfo' %}">Sales Info</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'livestockReport' %}">Market Report</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'info' %}">Buyer/Seller Info</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

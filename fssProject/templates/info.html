@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- Meta Tags Per Page Descriptions -->
+    {% block metaDescription %}
+      <meta name="description" content=
+        "Four State Stockyards wants to help your Buying and Selling experence be a good one. Here is some information about our Buyers and Sellers policy.">
+    {% endblock metaDescription %}
+<!-- Meta Keywords -->
+    {% block metaKeywords %}
+      <meta name="keywords" content="Four State Stockyards, Livestock, Sales, Buyer, Seller, Loading Dock, Bill Of Sale, Facility, Local, Haul, Cattle, Vet, De-horn, Sale, Day, Sale Day, Vaccine Recommendations, Vaccine, Trichomoniasis, Services, Preg-Checked, Preg-Check, Paid, Premium, Cows and Bulls, Cows, Bulls, Sheep and Goat, Sheep, Goats, Goat, Steel Pipe Pens, Automatic Waterers, Trailer, Restaurant, Weaned, Unload, Load, Office, Purchase, Purchased, ">
+    {% endblock metaKeywords %}
+<!-- Title -->
+    {% block titleContent %}
+      | Buyers/Sellers Info
+    {% endblock titleContent %}
+<!-- schemas Per Page or Section -->
+
+<!-- Main Page Content -->
+{% block mainContent %}
+  <div class="salesBodyBackground">
+    <section class="container salesContainer">
+      <main class="intro">
+        <h1 class="infoH">Buyer/Seller Info</h1>
+        <p class="infoP">
+          If you are a buyer, you will need to come to the office to get your buyer number before the sale. If this is your first time buying from us, our office staff will also need to get some information from you.  Once you have your buyer number, you can bid on any of the livestock that goes through our ring.  After the sale, pay for your newly purchased livestock at the office and you will receive a bill of sale.  Show your bill of sale to our handlers at the loading dock, and we will load the animals into your trailer as you see fit. 
+        <br><br>
+
+          If you are a seller, unload your cattle on the west side of the building.  When unloading, please be sure to tell our check-in staff anything that the future buyer might need to know.  For example, if you are selling calves, are they weaned?  And if so, how long have they been weaned?  Producers who choose to vaccinate their herd get paid a premium, so be sure to tell us if your cattle have had shots, and how many rounds they have had.  Our check-in staff will also ask for your name, address, number of cattle you are selling, the sex of your cattle, and whether you would like to have your cows preg-checked.
+        <br><br>
+
+          If you ever need help hauling your cattle to or from our facility, just let us know.  We will be happy to help you find someone local to haul your cattle!
+        <br><br>
+        
+          We have a knowledgeable vet on site during our sale days who can provide a variety of services to you.  For a fee, our vet can preg-check, test for Trichomoniasis, draw semen from bulls, de-horn your cattle, and much more.  They can also help you with vaccine recommendations, and if there is time, they can work your newly purchased cattle after the sale before you bring them home.
+
+        </p>
+      </main>
+      <div class="tariff">
+        <table class="table">
+          <caption id="charges">
+            List of Charges as of 2019 <br>
+            List does not include Vet Charges
+          </caption>
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Selling Commission</th>
+              <th scope="col">Charge</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Cows & Bulls</th>
+              <td>3% gross sales $15.00/hd minimum</td>
+            </tr>
+            <tr>
+              <th scope="row">Calves</th>
+              <td>$17.00/hd</td>
+            </tr>
+            <tr>
+              <th scope="row">Sheep & Goats</th>
+              <td>6% gross sales $6.00/hd minimum</td>
+            </tr>
+          </tbody>
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Yardage</th>
+              <th scope="col">Charge</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">All Livestock</th>
+              <td>$1.00/hd</td>
+            </tr>
+          </tbody>
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Feed & Overnight</th>
+              <th scope="col">Charge</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">All Livestock</th>
+              <td>$1.50/hd</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <main class="intro">
+        <h1 class="facilityH">Our Facility</h1>
+        <div id="facility_p">
+          <p class="infoP">
+              The capacity of our facility is constantly growing to accommodate more cattle.  Our steel pipe pens, alleyways, head chutes, and vet shack are kept very clean to lower any chance of disease transmission.
+              <br><br>
+              We work hard to prevent shrinkage while your cattle are at our facility, by offering hay and automatic waterers.
+              <br><br>
+              Water-misters and fans are kept running around the clock during warm weather to keep your cattle calm and cool.  We ensure that your livestock is handled and cared for properly when they are with us.  You will appreciate the way our employees care for your animals in preparation for the sale.
+              <br><br>
+              We accept cattle whenever you can bring them.  If you can't bring your cattle on Tuesday just give one of our <a href="{% url 'contactRep' %}">Field Reps</a> a call to set up a good time.  If you need help hauling your cattle, just let us know and we'll be happy to help you find someone local to haul your cattle for you.  
+              <br><br>
+              Our location is easily accessible while pulling a trailer.  We are located outside city limits, and we have an extra spacious parking lot to help you maneuver right off the highway.  
+              <br><br> 
+              Our restaurant is open all day on sale days, so come grab a bite to eat and enjoy the sale!
+          </p>
+        </div>
+      </main>
+    </section>
+  </div>
+{% endblock mainContent %}

@@ -1,0 +1,12 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+
+{% block branding %}
+<h1 id="head">
+    <img src="{% static 'images/midSize.png'%}" alt="Four State Stockyards" heigth="50" width="50" class="brand_img">
+    Four State Stockyards Admin Area
+</h1>
+{% endblock branding %}
+{% block extrastyle %}
+<link rel="stylesheet" href="{% static 'css/admin.css' %}">
+{% endblock extrastyle %}

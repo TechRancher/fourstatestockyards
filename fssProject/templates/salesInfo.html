@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- Meta Tags Per Page Descriptions -->
+    {% block metaDescription %}
+        <meta name="description" content=
+        "Four State Stockyards works hard to help you get the highest price out of your livestock. By providing knowledgable Field Reps, friendly sale staff, and a buyers atmosphere.">
+    {% endblock metaDescription %}
+<!-- Meta Keywords -->
+    {% block metaKeywords %}
+      <meta name="keywords" content="Four State Stockyards, Calves, Steers, Heifers, Feeders, Bred, Replacement, Cows, Replacement Cows, Slaughter, Slaughter Cows, Slaughter Bulls, Bulls, Sheep, Goat, Friday, Month, Special Cow Sale, Special Cow and Bull Sale, Sale, Sale Time, Tuesday, Photos, Livestock Sales, Livestock, Buyer, Seller, Market Report, Market, Sale Date, ">
+    {% endblock metaKeywords %}
+<!-- Title -->
+    {% block titleContent %}
+      | Sales Info
+    {% endblock titleContent %}
+<!-- schemas Per Page or Section -->
+    {% block schemasContent %}
+    {% endblock schemasContent %}
+
+<!-- Main Page Content -->
+{% block mainContent %}
+    <div id="infoImage">
+    </div>
+    <div class="container">
+        <h1 class="infoH">Livestock Sale Every Tuesday</h1>
+        <p class="infoP">
+            10:00 AM - Calves, Steers and Heifers <br>
+            6:00 PM - Feeders, Bred and Replacement Cows, Slaughter Cows, and Slaughter Bulls
+        </p>
+        <h2 class="infoH">Sheep and Goat Sales the 2nd Friday of Every Month</h2>
+        <p class="infoP">
+            Sale begins at 6:00 PM until done
+        </p>
+        <p class="infoP">
+            {% if specialSale %}
+                <h2 class="infoH">Special Cow and Bull Sale</h2>
+                {% for special in specialSale %}
+                <div class="row justify-content-between">
+                    <div class="col-4">
+                        <p id="saleType">
+                            {{ special.sale_type }}.
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <p>
+                            Sale Date: {{ special.sale_date }}
+                        </p>
+                    </div>
+                </div>
+                    <p>
+                        {{ special.sale_description }}
+                    </p>
+                <div class="ssPhoto">
+                    <div class="card">
+                        {% if special.photo_1 %}
+                            <img class="card-img" src="{{ special.photo_1.url }}" alt="">
+                        {% elif special.photo_2 %}
+                            <img class="card-img" src="{{ special.photo_2.url }}" alt="">
+                        {% elif special.photo_3 %}
+                            <img class="card-img" src="{{ special.photo_3.url }}" alt="">
+                        {% elif special.photo_4 %}
+                            <img class="card-img" src="{{ special.photo_4.url }}" alt="">
+                        {% elif special.photo_5 %}
+                            <img class="card-img" src="{{ special.photo_5.url }}" alt="">
+                        {% else %}
+                            <p>Photos may be added soon.</p>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+            <h3 class="infoH">
+                No Special Sales at this time.
+            </h3>
+            {% endif %}
+        </p>
+    </div>
+{% endblock mainContent %}
+    

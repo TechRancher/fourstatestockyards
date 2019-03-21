@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+<!-- Meta Tags Per Page Descriptions -->
+    {% block metaDescription %}
+      <meta name="description" content=
+      "Four State Stockyards knows the importance of marketing your cattle. Call one of our Field Reps to help you gain the maximum amount out of your livestock sale.">
+    {% endblock metaDescription %}
+<!-- Meta Keywords -->
+    {% block metaKeywords %}
+      <meta name="keywords" content="Field Reps, Clay Hammen, Colby Hammen, Cale Hammen, Cade Hammen, Chris Keeling, Brandon Tichenor, Colt Keeling, John Guenther, Livestock, Livestock Marketing, Live Sales, Four State Stockyards, Sales Info, Market Report, Buyer, Seller, Buyer/Seller, Info">
+    {% endblock metaKeywords %}
+<!-- Title -->
+    {% block titleContent %}
+      | Contact Field Rep.
+    {% endblock titleContent %}
+<!-- schemas Per Page or Section -->
+    {% block schemasContent %}
+    {% endblock schemasContent %}
+
+<!-- Main Page Content -->
+{% block mainContent %}
+    <section class="container">
+      <p id="contactP">
+        Contact one of our Field Reps for your Livestock Marketing needs.
+      </p>
+      </main>
+    </section>
+    <div class="contactRepPageImage contactCards">
+      <section class="container">
+        <div class="card-deck repDeck">
+          <div class="card repCard">
+            <img class="card-img float-left" src="{% static 'images/Clay Hammen2.JPG' %}" alt="Clay-Hammen.jpg">
+            <div class="card-body">
+              <h5 class="card-title">Clay Hammen</h5>
+              <p class="card-text"><a href="tel:4174895732">417-489-5732</a></p>
+            </div>
+          </div>
+          <div class="card repCard">
+            <img class="card-img" src="{% static 'images/Colby Hammen2.JPG' %}" alt="Colby-Hammen.jpg">
+            <div class="card-body">
+              <h5 class="card-title">Colby Hammen</h5>
+              <p class="card-text"><a href="tel:4174892684">417-489-2684</a></p>
+            </div>
+          </div>
+          <div class="card repCard">
+            <img class="card-img" src="{% static 'images/Cale Hammen2.JPG' %}" alt="Cale-Hammen.jpg">
+            <div class="card-body">
+              <h5 class="card-title">Cale Hammen</h5>
+              <p class="card-text"><a href="tel:4176699593">417-669-9593</a></p>
+            </div>
+          </div>
+          <div class="card repCard">
+            <img class="card-img" src="{% static 'images/Cade Hammen2.JPG' %}" alt="Cade-Hammen.jpg">
+            <div class="card-body">
+              <h5 class="card-title">Cade Hammen</h5>
+              <p class="card-text"><a href="tel:4173423407">417-342-3407</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="card-deck repDeck deck2">
+          <div class="card repCard">
+            <img class="card-img" src="{% static 'images/Chris Keeling2.JPG' %}" alt="Chris-Keeling.jpg">
+            <div class="card-body">
+              <h5 class="card-title">Chris Keeling</h5>
+              <p class="card-text"><a href="tel:4177379148">417-737-9148</a></p>
+            </div>
+          </div>
+          <div class="card repCard">
+            <img class="card-img" src="{% static 'images/Brandon Tichenor2.JPG' %}" alt="Brandon-Tichenor.jpg">
+            <div class="card-body">
+              <h5 class="card-title">Brandon Tichenor</h5>
+              <p class="card-text"><a href="tel:4175404717">417-540-4717</a></p>
+            </div>
+          </div>
+          <div class="card repCard">
+            <img class="card-img" src="{% static 'images/Colt Keeling.JPG' %}" alt="Colt-Keeling.jpg">
+            <div class="card-body">
+              <h5 class="card-title">Colt Keeling</h5>
+              <p class="card-text"><a href="tel:4174898864">417-489-8864</a></p>
+            </div>
+          </div>
+          <div class="card repCard">
+            <img class="card-img" src="{% static 'images/John Guenther.JPG' %}" alt="John-Guenther.jpg">
+            <div class="card-body">
+              <h5 class="card-title">John Guenther</h5>
+              <p class="card-text"><a href="tel:4173880399">417-388-0399</a></p>
+            </div>
+          </div>
+        </div>   
+      </section>
+    </div>
+    
+{% endblock mainContent %}

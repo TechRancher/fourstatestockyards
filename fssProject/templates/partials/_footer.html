@@ -1,0 +1,46 @@
+<!-- Footer Section -->
+<footer id="footer">
+    <div class="foot">
+        <div class="row center-xs center-sm start-md start-lg">
+            <!-- Footer Column 1 -->
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 xl-3 w-75 pt-3  box1">
+                <!-- Footer Column 1 -->
+                <h5>Helpful Links</h5>
+                <p>
+                  <a href="#footer_nav" id="access_nav" class="access_aid"><i class="fas fa-bars"></i> Drop down navigation</a>
+                </p>
+                <nav id="footer_nav">
+                    <ul>
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="{% url 'contactRep' %}">Contact Us</a></li>
+                        <li><a href="{% url 'salesInfo' %}">Sales Info</a></li>
+                        <li><a href="{% url 'livestockReport' %}">Market Report</a></li>
+                        <li><a href="{% url 'info' %}">Buyer/Seller Info</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Footer Column 2 -->
+
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 xl-3 pt-3 ml-auto box2">
+                <h5>Like Us on Facebook</h5>
+                <div class="fb-like" data-href="https://www.facebook.com/fourstatestockyards/" data-layout="button" data-action="like"
+                    data-size="large" data-show-faces="false" data-share="true"></div>
+
+            </div>
+
+            <!-- Footer Column 3 -->
+
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 xl-3 pt-3 ml-auto box3">
+                <h5>Our Location</h5>
+                <a href="https://www.google.com/maps?ll=36.671771,-93.955943&z=12&t=m&hl=en-US&gl=US&mapclient=embed&q=9735+MO-76+Exeter,+MO+65647" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marked-alt"></i> Click for large map</a>
+                
+                <address>
+                    Four State Stockyards <br>
+                    9735 MO-76 <br>
+                    Exeter, Missouri 65647
+                </address>
+            </div>
+
+        </div>
+</footer>

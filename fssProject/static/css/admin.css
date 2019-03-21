@@ -1,0 +1,74 @@
+#header {
+    height: 50px;
+    background: #800000;
+    color: #fff;
+}
+
+#branding h1 {
+    color: #fff;
+    font-weight: 600;
+}
+
+a:link,
+a:visited {
+    color: #10284e;
+}
+
+div.breadcrumbs {
+    background: #708090;
+    color: #fff;
+}
+
+div.breadcrumbs a {
+    color: #fff;
+}
+
+.object-tools a:link, .object-tools a:visited {
+    display: block;
+    float: left;
+    padding: 3px 12px;
+    background: #800000;
+    font-weight: 400;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #fff;
+}
+
+#user-tools a:focus, #user-tools a:hover {
+    text-decoration: none;
+    border-bottom-color: #708090;
+    color: #708090;
+    font-size: 1.2rem;
+}
+
+.module h2, .module caption, .inline-group h2 {
+    background: #708090;
+}
+
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background: #708090;
+    color: #fff;
+}
+
+.button.default, input[type=submit].default, .submit-row input.default {
+    float: right;
+    border: none;
+    font-weight: 400;
+    background: #800000;
+}
+
+.calendar caption, .calendarbox h2 {
+    margin: 0;
+    text-align: center;
+    border-top: none;
+    background: #800000 !important;
+    font-weight: 700;
+    font-size: 12px;
+    color: #fff !important;
+}
+
+.calendar td.selected a {
+    background: #708090 !important;
+    color: #fff;
+}

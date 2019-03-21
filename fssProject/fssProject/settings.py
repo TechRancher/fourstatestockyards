@@ -84,9 +84,9 @@ WSGI_APPLICATION = 'fssProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'fssLivestock',
-        'USER': 'postgres',
-        'PASSWORD': 'HisFamily9!',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '5432'
     }
